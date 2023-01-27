@@ -173,16 +173,16 @@ int print_rot13string(va_list types, char buffer[],
 			{
 				x = out[j];
 				write(1, &x, 1);
-count++;
-break;
-}
-}
-if (!in[j])
-{
-x = str[i];
-write(1, &x, 1);
-count++;
-}
-}
-return (count);
+				count++;
+				break;
+			}
+		}
+		if (!in[j])
+		{
+			x = str[i];
+			write(1, &x, 1);
+			count++;
+		}
+	}
+	return (count);
 }
